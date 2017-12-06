@@ -204,7 +204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0dd066fb3a7e4f498de90ce19c0fdd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBetweenSpawns: 0.1
+  timeBetweenSpawns: 0.01
   spawnDistance: 10
   nucleonPrefabs:
   - {fileID: 114629140886465398, guid: aca80d7c207254e79aa0dc9472277076, type: 2}

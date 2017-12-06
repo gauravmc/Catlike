@@ -8,7 +8,6 @@ public class NucleonSpawner : MonoBehaviour {
 	private float timeSinceLastSpawn;
 
 	private void Awake() {
-		SpawnNucleon();
 		timeSinceLastSpawn = 0;
 	}
 
