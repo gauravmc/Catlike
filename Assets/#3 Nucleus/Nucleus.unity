@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.4465785, g: 0.49641252, b: 0.574817, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -407,7 +407,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 249559986}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 430, y: 242, z: 0}
+  m_LocalPosition: {x: 436.5, y: 245.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1282316954}
@@ -564,7 +564,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1282316953}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -400, y: 177.15, z: 0}
+  m_LocalPosition: {x: -406.5, y: 180.65, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 966393574}
@@ -625,6 +625,17 @@ MonoBehaviour:
   averageFPSText: {fileID: 966393575}
   highestFPSText: {fileID: 154013381}
   lowestFPSText: {fileID: 48681123}
+  fpsColors:
+  - minimumFPS: 80
+    color: {r: 0, g: 1, b: 0.13103461, a: 1}
+  - minimumFPS: 60
+    color: {r: 0.746331, g: 1, b: 0, a: 1}
+  - minimumFPS: 40
+    color: {r: 1, g: 0.7391719, b: 0, a: 1}
+  - minimumFPS: 20
+    color: {r: 1, g: 0.43131712, b: 0, a: 1}
+  - minimumFPS: 0
+    color: {r: 1, g: 0.09092738, b: 0, a: 1}
 --- !u!114 &1282316958
 MonoBehaviour:
   m_ObjectHideFlags: 0
