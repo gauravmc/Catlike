@@ -4,4 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/#4 Fountain/Fountain.unity
+    guid: af122a21a0f5146eba7015353f1cd26c
+  - enabled: 1
+    path: Assets/#4 Fountain/Fountain 2.unity
+    guid: e908597b0c3cd443da558ab62e48eeff
