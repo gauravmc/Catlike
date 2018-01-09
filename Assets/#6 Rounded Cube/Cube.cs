@@ -13,12 +13,11 @@ public class Cube : MonoBehaviour {
 	}
 
 	private void Generate() {
-		WaitForSeconds wait = new WaitForSeconds(0.05f);
 		GetComponent<MeshFilter>().mesh = mesh = new Mesh();
 		mesh.name = "Procedural Cube";
 		vertices = new Vector3[CalculateNumberOfVertices()];
-		CreateVertices();
-		CreateTriangles();
+		StartCoroutine(CreateVertices());
+//		CreateTriangles();
 	}
 
 	private int CalculateNumberOfVertices() {
@@ -31,25 +30,31 @@ public class Cube : MonoBehaviour {
 		return cornerVertices + edgeVertices + faceVertices;
 	}
 
-	private void CreateVertices() {
+	private IEnumerator CreateVertices() {
+		WaitForSeconds wait = new WaitForSeconds(0.05f);
 		int v = 0;
 
 		for (int y = 0; y <= ySize; y++) {
 			for (int x = 0; x <= xSize; x++) {
 				vertices[v++] = new Vector3(x, y, 0);
+				yield return wait;
 			}
 
 			for (int z = 1; z <= zSize; z++) {
 				vertices[v++] = new Vector3(xSize, y, z);
+				yield return wait;
 			}
 
 			for (int x = xSize - 1; x >= 0; x--) {
 				vertices[v++] = new Vector3(x, y, zSize);
+				yield return wait;
 			}
 
 			for (int z = zSize - 1; z > 0; z--) {
 				vertices[v++] = new Vector3(0, y, z);
+				yield return wait;
 			}
+			yield return wait;
 		}
 
 		for (int x = 1; x < xSize; x++) {
@@ -67,11 +72,11 @@ public class Cube : MonoBehaviour {
 		mesh.vertices = vertices;
 	}
 
-	private void CreateTriangles() {
-		int quads = (xSize * ySize + ySize * zSize + zSize * xSize) * 2;
-		int[] triangles = new int[quads * 6];
-		mesh.triangles = triangles;
-	}
+//	private void CreateTriangles() {
+//		int quads = (xSize * ySize + ySize * zSize + zSize * xSize) * 2;
+//		int[] triangles = new int[quads * 6];
+//		mesh.triangles = triangles;
+//	}
 
 	private void OnDrawGizmos() {
 		if (vertices == null) {
